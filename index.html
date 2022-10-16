@@ -17,13 +17,15 @@
     <form id="loginform" style="padding: 1em; display: none;">
       <input id="lcwo-username" req="true" placeholder="Username" />
       <input id="lcwo-password" req="true" type="password" placeholder="Password" />
-      <button type="button" onclick="doLcwoLogin();initLcwoStats();">OK</button>
+      <label for="save-password">Save password</label>
+      <input id="save-password" type="checkbox" />
+      <button type="button" onclick="saveCredentials();doLcwoLogin();renderLcwoStats();">OK</button>
     </form>
     
     <h2>Koch Method CW Course</h2>
     <div id="cal-heatmap"></div>
     <script type="text/javascript">
-      initLcwoStats();
+      renderLcwoStats();
     </script>
     
   </body>
